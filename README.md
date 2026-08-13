@@ -6,7 +6,7 @@ A free, responsive, cinematic production-house website for GitHub Pages.
 - `index.html`
 - `style.css`
 - `script.js`
-- `assets/logo.jpg`
+- `logo.jpg`
 
 ## GitHub Pages
 1. Upload all files to the root of your GitHub repository.
