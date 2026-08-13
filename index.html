@@ -1,20 +1,161 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="US Forever Films & Entertainment — Mumbai-based production house.">
-<title>US Forever Films & Entertainment | Stories That Live Forever</title>
-<link rel="stylesheet" href="style.css"></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="US Forever Films & Entertainment — Mumbai-based production house creating cinematic stories, films, music videos, commercials and digital entertainment.">
+  <meta name="theme-color" content="#050505">
+  <title>US Forever Films & Entertainment | Mumbai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header class="nav"><a class="brand" href="#home"><img src="logo.jpg" alt="US Forever Films & Entertainment"></a>
-<button class="menu">☰</button><nav><a href="#about">About</a><a href="#projects">Projects</a><a href="#trailers">Trailers</a><a href="#team">Team</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav></header>
-<main>
-<section id="home" class="hero"><div class="orb one"></div><div class="orb two"></div><div class="heroText"><p class="eyebrow">MUMBAI • INDIA • FILM & ENTERTAINMENT</p><h1>Stories That<br><i>Live Forever.</i></h1><p class="intro">Bold stories. Cinematic worlds. Unforgettable entertainment.</p><div class="actions"><a class="btn gold" href="#projects">Explore Our World</a><a class="btn" href="#contact">Work With Us</a></div></div><div class="circle"></div></section>
-<section id="about" class="section"><p class="eyebrow">OUR STORY</p><h2>Built for stories <i>worth remembering.</i></h2><div class="two"><p class="lead">US Forever Films & Entertainment is a Mumbai-based production house dedicated to films, web series, music videos, commercials and digital entertainment.</p><p>We bring original ideas, cinematic creativity and professional production together to create visual experiences that connect with audiences. From concept to production and post-production, every project is driven by passion, craft and a desire to make a lasting impression.</p></div></section>
-<section id="projects" class="section dark"><p class="eyebrow">SELECTED WORK</p><h2>Our cinematic <i>universe.</i></h2><div class="cards"><article class="card c1"><span>FILM / SERIES</span><h3>Your Next Story</h3><p>Official project showcase coming soon.</p></article><article class="card c2"><span>MUSIC / DIGITAL</span><h3>Visual Stories</h3><p>Original content, music and entertainment.</p></article><article class="card c3"><span>BRAND / COMMERCIAL</span><h3>Ideas On Screen</h3><p>Cinematic brand storytelling.</p></article></div></section>
-<section id="trailers" class="section"><p class="eyebrow">WATCH</p><h2>Teasers & <i>Trailers.</i></h2><div class="video"><div class="play">▶</div><div><span>YOUR NEXT RELEASE</span><h3>Trailer Showcase</h3><p>Add your YouTube teaser or trailer link here.</p></div></div></section>
-<section id="team" class="section dark"><p class="eyebrow">THE PEOPLE</p><h2>Founders & <i>Core Team.</i></h2><div class="team"><div><div class="avatar">+</div><h3>Founder</h3><p>Add founder details</p></div><div><div class="avatar">+</div><h3>Creative Team</h3><p>Add core team members</p></div><div><div class="avatar">+</div><h3>Production Team</h3><p>Add production team members</p></div></div></section>
-<section id="gallery" class="section"><p class="eyebrow">BEHIND THE SCENES</p><h2>Life behind <i>the camera.</i></h2><div class="gallery"><div>POSTERS</div><div>BTS</div><div>ON SET</div><div>CREATIVE</div></div></section>
-<section class="cta"><p class="eyebrow">LET'S CREATE</p><h2>Your story could be <i>the next one.</i></h2><a class="btn gold" href="mailto:usforever391976@gmail.com">Start a Conversation</a></section>
-<section id="contact" class="section contact"><div><p class="eyebrow">CONTACT</p><h2>Let's make <i>something unforgettable.</i></h2></div><div class="links"><a href="mailto:usforever391976@gmail.com">usforever391976@gmail.com</a><a href="tel:+918898732336">+91 8898732336</a><span>Mumbai, Maharashtra, India</span><a href="https://www.instagram.com/usforever391976/" target="_blank">Instagram @usforever391976 ↗</a></div></section>
-</main><footer><img src="logo.jpg" alt="US Forever Films & Entertainment"><span>© 2026 US Forever Films & Entertainment</span><b>Stories That Live Forever.</b></footer>
-<script src="script.js"></script></body></html>
+  <div id="loader" class="loader">
+    <img src="assets/logo.jpg" alt="US Forever Films & Entertainment logo">
+    <div class="loader-line"><span></span></div>
+    <p>US FOREVER</p>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="US Forever Films & Entertainment home">
+      <img src="assets/logo.jpg" alt="US Forever Films & Entertainment logo">
+      <span>US FOREVER<br><small>FILMS & ENTERTAINMENT</small></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <div class="eyebrow">MUMBAI • INDIA</div>
+        <h1>Stories That<br><em>Live Forever.</em></h1>
+        <p>We turn bold ideas into cinematic experiences — from films and music videos to commercials and digital entertainment.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#projects">Explore Our Work</a>
+          <a class="btn btn-outline" href="#contact">Work With Us</a>
+        </div>
+      </div>
+      <div class="scroll-cue">SCROLL <span>↓</span></div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-heading reveal">
+        <span>01 / ABOUT US</span>
+        <h2>Where Vision<br><em>Becomes Cinema.</em></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="lead">US Forever Films & Entertainment is a Mumbai-based production house built around one belief: every story deserves to be told with emotion, imagination and cinematic excellence.</p>
+          <p>From original films and short-form stories to music videos, commercials and digital content, we bring together creative direction, production and post-production to create memorable visual experiences.</p>
+          <a class="text-link" href="#contact">Start a conversation <span>→</span></a>
+        </div>
+        <div class="about-card reveal">
+          <div class="gold-ring"></div>
+          <img src="assets/logo.jpg" alt="US Forever Films & Entertainment emblem">
+          <h3>CREATE • CAPTURE • INSPIRE</h3>
+          <p>Mumbai, Maharashtra, India</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-heading reveal">
+        <span>02 / WHAT WE DO</span>
+        <h2>Our <em>Services</em></h2>
+      </div>
+      <div class="service-grid">
+        <article class="service reveal"><b>01</b><h3>Film Production</h3><p>Feature films, short films and original cinematic projects from concept through final delivery.</p></article>
+        <article class="service reveal"><b>02</b><h3>Music Videos</h3><p>Stylish, performance-driven visual stories designed for artists, labels and digital audiences.</p></article>
+        <article class="service reveal"><b>03</b><h3>Commercials</h3><p>Brand films, advertisements and campaign content with a cinematic visual language.</p></article>
+        <article class="service reveal"><b>04</b><h3>Post Production</h3><p>Editing, colour finishing, motion graphics and VFX support for polished final content.</p></article>
+        <article class="service reveal"><b>05</b><h3>Photography</h3><p>Production stills, portraits, promotional photography and behind-the-scenes coverage.</p></article>
+        <article class="service reveal"><b>06</b><h3>Digital Content</h3><p>Social-first video, branded content and entertainment designed for today's platforms.</p></article>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="section-heading reveal">
+        <span>03 / SELECTED WORK</span>
+        <h2>Our <em>Projects</em></h2>
+      </div>
+      <div class="project-grid">
+        <article class="project project-large reveal">
+          <div class="project-placeholder"><span>01</span><strong>FEATURE FILMS</strong><small>COMING SOON</small></div>
+          <div class="project-info"><h3>Original Cinema</h3><p>Stories built for the big screen.</p></div>
+        </article>
+        <article class="project reveal">
+          <div class="project-placeholder"><span>02</span><strong>MUSIC VIDEOS</strong><small>COMING SOON</small></div>
+          <div class="project-info"><h3>Music & Visuals</h3><p>Sound meets cinema.</p></div>
+        </article>
+        <article class="project reveal">
+          <div class="project-placeholder"><span>03</span><strong>BRAND FILMS</strong><small>COMING SOON</small></div>
+          <div class="project-info"><h3>Commercial Stories</h3><p>Brands with a cinematic voice.</p></div>
+        </article>
+      </div>
+      <p class="portfolio-note">Your movie posters, trailers and completed projects can be added here anytime.</p>
+    </section>
+
+    <section id="gallery" class="section gallery">
+      <div class="section-heading reveal">
+        <span>04 / GALLERY</span>
+        <h2>Behind the <em>Scenes</em></h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item main reveal"><img src="assets/logo.jpg" alt="US Forever Films & Entertainment logo"></div>
+        <div class="gallery-item reveal"><span>YOUR<br>PROJECT<br>PHOTO</span></div>
+        <div class="gallery-item reveal"><span>YOUR<br>POSTER<br>HERE</span></div>
+        <div class="gallery-item reveal"><span>BEHIND<br>THE<br>SCENES</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-heading reveal">
+        <span>05 / CONTACT</span>
+        <h2>Let's Create<br><em>Something Forever.</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-details reveal">
+          <div><small>CALL</small><a href="tel:+918898732336">+91 8898732336</a></div>
+          <div><small>EMAIL</small><a href="mailto:usforever391976@gmail.com">usforever391976@gmail.com</a></div>
+          <div><small>OFFICE</small><p>Mumbai, Maharashtra, India</p></div>
+          <div><small>INSTAGRAM</small><a href="https://www.instagram.com/usforever391976/" target="_blank" rel="noopener">@usforever391976</a></div>
+        </div>
+        <form class="contact-form reveal" id="contactForm" action="mailto:usforever391976@gmail.com" method="post" enctype="text/plain">
+          <label>Your Name<input name="name" type="text" placeholder="Enter your name" required></label>
+          <label>Email Address<input name="email" type="email" placeholder="Enter your email" required></label>
+          <label>Project Type<select name="project"><option>Film Production</option><option>Music Video</option><option>Commercial</option><option>Photography</option><option>Post Production</option><option>Other</option></select></label>
+          <label>Message<textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea></label>
+          <button class="btn btn-gold" type="submit">Send Inquiry →</button>
+          <p class="form-note">This free version opens your email app to send the inquiry. A server-based form can be added later.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="assets/logo.jpg" alt="US Forever Films & Entertainment logo">
+      <div><strong>US FOREVER FILMS & ENTERTAINMENT</strong><span>Stories That Live Forever.</span></div>
+    </div>
+    <div class="footer-links"><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+    <p>© <span id="year"></span> US Forever Films & Entertainment. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
