@@ -1,56 +1,234 @@
-function toggleMenu() {
-    const nav = document.getElementById("mainNav");
+/* =====================================================
+   US FOREVER FILMS & ENTERTAINMENT
+   WEBSITE INTERACTIONS
+===================================================== */
 
-    if (nav) {
-        nav.classList.toggle("open");
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ==============================
+     MOBILE MENU
+  ============================== */
+
+  const menuButton = document.querySelector(".menu-button");
+  const nav = document.querySelector("header nav");
+
+  if (menuButton && nav) {
+    menuButton.addEventListener("click", function () {
+      nav.classList.toggle("active");
+
+      const isOpen = nav.classList.contains("active");
+
+      menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+      menuButton.innerHTML = isOpen ? "✕" : "☰";
+    });
+
+    /* Close menu after clicking a link */
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        nav.classList.remove("active");
+
+        menuButton.setAttribute("aria-expanded", "false");
+
+        menuButton.innerHTML = "☰";
+      });
+    });
+  }
+
+
+  /* ==============================
+     HEADER SCROLL EFFECT
+  ============================== */
+
+  const header = document.querySelector(".header");
+
+  function updateHeader() {
+    if (!header) return;
+
+    if (window.scrollY > 60) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
     }
-}
+  }
+
+  window.addEventListener("scroll", updateHeader);
+
+  updateHeader();
 
 
-// Close mobile menu after clicking a link
+  /* ==============================
+     SMOOTH SCROLL
+  ============================== */
 
-document.querySelectorAll("#mainNav a").forEach(function(link) {
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
-    link.addEventListener("click", function() {
+    link.addEventListener("click", function (event) {
 
-        const nav = document.getElementById("mainNav");
+      const targetId = this.getAttribute("href");
 
-        if (nav) {
-            nav.classList.remove("open");
-        }
+      if (!targetId || targetId === "#") return;
+
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        event.preventDefault();
+
+        const headerHeight = header
+          ? header.offsetHeight
+          : 0;
+
+        const targetPosition =
+          target.getBoundingClientRect().top +
+          window.pageYOffset -
+          headerHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+      }
 
     });
 
-});
+  });
 
 
-// Smooth reveal animation when sections enter the screen
+  /* ==============================
+     SCROLL REVEAL
+  ============================== */
 
-const revealElements = document.querySelectorAll(
-    ".section, .project-card, .team-card, .gallery-item, .video-showcase"
-);
+  const revealElements = document.querySelectorAll(
+    ".section-heading, .project-card, .team-card, .video-card, .gallery-grid img, .contact-card, .about-grid"
+  );
 
-const observer = new IntersectionObserver(
-    function(entries) {
+  if ("IntersectionObserver" in window) {
 
-        entries.forEach(function(entry) {
+    const observer = new IntersectionObserver(
+      function (entries) {
 
-            if (entry.isIntersecting) {
+        entries.forEach(function (entry) {
 
-                entry.target.classList.add("visible");
+          if (entry.isIntersecting) {
 
-            }
+            entry.target.classList.add("reveal-visible");
+
+            observer.unobserve(entry.target);
+
+          }
 
         });
 
-    },
-    {
+      },
+      {
         threshold: 0.12
-    }
-);
+      }
+    );
 
-revealElements.forEach(function(element) {
+    revealElements.forEach(function (element) {
+      element.classList.add("reveal");
 
-    observer.observe(element);
+      observer.observe(element);
+    });
+
+  } else {
+
+    revealElements.forEach(function (element) {
+      element.classList.add("reveal-visible");
+    });
+
+  }
+
+
+  /* ==============================
+     HERO PARALLAX
+  ============================== */
+
+  const heroBackground =
+    document.querySelector(".hero-background");
+
+  if (heroBackground) {
+
+    window.addEventListener("scroll", function () {
+
+      const scrollPosition = window.pageYOffset;
+
+      if (scrollPosition < window.innerHeight) {
+
+        heroBackground.style.transform =
+          "scale(1.02) translateY(" +
+          scrollPosition * 0.12 +
+          "px)";
+
+      }
+
+    });
+
+  }
+
+
+  /* ==============================
+     CURRENT YEAR
+  ============================== */
+
+  const yearElements =
+    document.querySelectorAll("[data-year]");
+
+  yearElements.forEach(function (element) {
+    element.textContent = new Date().getFullYear();
+  });
+
+
+  /* ==============================
+     IMAGE FALLBACK
+  ============================== */
+
+  document.querySelectorAll("img").forEach(function (image) {
+
+    image.addEventListener("error", function () {
+
+      this.style.background = "#151515";
+
+      this.style.objectFit = "contain";
+
+      this.alt = "US Forever Films & Entertainment";
+
+    });
+
+  });
 
 });
+
+
+/* =====================================================
+   MOBILE MENU FUNCTION
+   Kept globally available for existing HTML
+===================================================== */
+
+function toggleMenu() {
+
+  const nav = document.querySelector("header nav");
+
+  const menuButton =
+    document.querySelector(".menu-button");
+
+  if (!nav) return;
+
+  nav.classList.toggle("active");
+
+  const isOpen = nav.classList.contains("active");
+
+  if (menuButton) {
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+
+    menuButton.innerHTML =
+      isOpen ? "✕" : "☰";
+
+  }
+
+}
