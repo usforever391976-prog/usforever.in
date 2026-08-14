@@ -1,78 +1,75 @@
 .slides,
-.slides, .slides i, .shade {     position:absolute;     inset:0; }  .slides {     z-index:0;     overflow:hidden; }  .slides i {     opacity:0;     display:block;     background-image:         linear-gradient(90deg, rgba(5,3,8,.55), rgba(5,3,8,.15)),         url("hero-cinema.jpg.png");     background-size:cover;     background-position:center;     animation:show 18s infinite; }  .slides i:nth-child(2) {     animation-delay:6s; }  .slides i:nth-child(3) {     animation-delay:12s; }  @keyframes show {     0%,30% {         opacity:0;         transform:scale(1);     }      5%,25% {         opacity:1;     }      35%,100% {         opacity:0;         transform:scale(1.08);     } }  .shade {     z-index:1;     background:         linear-gradient(             90deg,             rgba(5,3,8,.65),             rgba(7,5,11,.25),             rgba(7,5,11,.05)         ),         linear-gradient(             0deg,             rgba(7,5,11,.65),             transparent 60%         ); },
+.slides i,
 .shade {
-    position:absolute;
-    inset:0;
+  position: absolute;
+  inset: 0;
 }
 
 .slides {
-    z-index:0;
-    overflow:hidden;
+  z-index: 0;
+  overflow: hidden;
 }
 
 .slides i {
-    opacity:0;
-    display:block;
-    background-size:cover;
-    background-position:center;
-    animation:show 18s infinite;
-    transform:scale(1);
+  display: block;
+  opacity: 0;
+  background-image: url("hero-cinema.jpg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: show 18s infinite;
+  transform: scale(1);
 }
 
-/* Cinematic camera background */
 .slides i:nth-child(1) {
-    background-image:
-        linear-gradient(90deg, rgba(5,3,8,.55), rgba(5,3,8,.15)),
-        url("assets/cinematic-camera.jpg");
+  opacity: 1;
+  animation-delay: 0s;
 }
 
-/* Film set / lighting background */
 .slides i:nth-child(2) {
-    animation-delay:6s;
-    background-image:
-        linear-gradient(90deg, rgba(5,3,8,.55), rgba(5,3,8,.15)),
-        url("assets/film-set-lights.jpg");
+  background-image: url("hero-cinema.jpg.png");
+  animation-delay: 6s;
 }
 
-/* Clapperboard / movie production background */
 .slides i:nth-child(3) {
-    animation-delay:12s;
-    background-image:
-        linear-gradient(90deg, rgba(5,3,8,.55), rgba(5,3,8,.15)),
-        url("assets/clapperboard.jpg");
+  background-image: url("hero-cinema.jpg.png");
+  animation-delay: 12s;
 }
 
 @keyframes show {
-    0%,30% {
-        opacity:0;
-        transform:scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
 
-    5%,25% {
-        opacity:1;
-    }
+  8% {
+    opacity: 1;
+  }
 
-    35%,100% {
-        opacity:0;
-        transform:scale(1.08);
-    }
+  30% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+
+  38%,
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
 }
 
 .shade {
-    z-index:1;
-    background:
-        linear-gradient(90deg,
-            rgba(5,3,8,.75),
-            rgba(7,5,11,.35),
-            rgba(7,5,11,.08)
-        ),
-        linear-gradient(0deg,
-            rgba(7,5,11,.75),
-            transparent 55%
-        );
-}
-
-.heroText {
-    position:relative;
-    z-index:2;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.78),
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.12)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.75),
+      transparent 60%
+    );
 }
