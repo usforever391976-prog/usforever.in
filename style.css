@@ -73,3 +73,55 @@
       transparent 60%
     );
 }
+/* HOMEPAGE CINEMATIC BACKGROUND */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero .slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero .slides i {
+    position: absolute;
+    inset: 0;
+    display: block;
+    opacity: 1 !important;
+    background-image: url("hero-cinema.jpg.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    transform: scale(1.03);
+}
+
+.hero .slides i:nth-child(2),
+.hero .slides i:nth-child(3) {
+    display: none;
+}
+
+.hero .shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.82) 0%,
+            rgba(0,0,0,.55) 45%,
+            rgba(0,0,0,.20) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(0,0,0,.75) 0%,
+            transparent 65%
+        );
+}
+
+.hero .heroText {
+    position: relative;
+    z-index: 2;
+}
