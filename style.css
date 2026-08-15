@@ -973,3 +973,56 @@ button {
   }
 
 }
+/* FINAL HERO OVERLAP FIX */
+
+.hero {
+  position: relative !important;
+  min-height: 100vh !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+.hero-background {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+}
+
+.hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1 !important;
+}
+
+.hero-content {
+  position: relative !important;
+  z-index: 5 !important;
+  width: min(700px, 90%) !important;
+  margin-left: 8% !important;
+  margin-right: auto !important;
+  padding-top: 70px !important;
+}
+
+.scroll-indicator {
+  position: absolute !important;
+  z-index: 6 !important;
+}
+
+@media (max-width: 800px) {
+
+  .hero {
+    min-height: 100vh !important;
+    height: 100vh !important;
+  }
+
+  .hero-content {
+    width: 88% !important;
+    margin-left: 6% !important;
+    padding-top: 70px !important;
+  }
+
+}
